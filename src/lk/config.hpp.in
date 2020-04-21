@@ -1,0 +1,57 @@
+#ifndef LINKATA_CONFIG_HPP_
+#define LINKATA_CONFIG_HPP_
+
+#define LINKATA_VERSION "@linkata_VERSION@"
+#define LINKATA_VERSION_MAJOR @linkata_VERSION_MAJOR@
+#define LINKATA_VERSION_MINOR @linkata_VERSION_MINOR@
+#define LINKATA_VERSION_PATCH @linkata_VERSION_PATCH@
+
+#cmakedefine LINKATA_EMBED_RESOURCES
+#cmakedefine LINKATA_COPY_IMGUI_FONT_DATA
+#cmakedefine LINKATA_WITH_EMOJIS
+
+/// possibly unreliable workarounds
+#cmakedefine LINKATA_HAX
+
+#if defined(LINKATA_HAX)
+/// reliable workaround to get the atlas texture
+#cmakedefine LINKATA_HAX_ATLAS_TEXTURE
+#endif
+
+#define LINKATA_PLATFORM "@LINKATA_PLATFORM@"
+#define LINKATA_PLATFORM_HEADER <Magnum/Platform/@LINKATA_PLATFORM@.h>
+#define LINKATA_PLATFORM_@LINKATA_PLATFORM@
+
+#define LINKATA_UI "@LINKATA_UI@"
+#define LINKATA_UI_HEADER <lk/@LINKATA_UI@/ui.hpp>
+#define LINKATA_UI_@LINKATA_UI@
+
+namespace lk::config {
+  const constexpr char app_name[] = "linkata";
+  const constexpr char platform[] = LINKATA_PLATFORM;
+  const constexpr char ui[] = LINKATA_UI;
+  namespace version {
+    const constexpr char string[] = LINKATA_VERSION;
+    const constexpr int major = LINKATA_VERSION_MAJOR;
+    const constexpr int minor = LINKATA_VERSION_MINOR;
+    const constexpr int patch = LINKATA_VERSION_PATCH;
+  }
+}
+
+#define PP_THIRD_ARG(a,b,c,...) c
+#define VA_OPT_SUPPORTED_IMPL(...) PP_THIRD_ARG(__VA_OPT__(,),true,false,)
+#if VA_OPT_SUPPORTED_IMPL(?)
+#define VA_OPT_SUPPORTED
+#endif
+
+#undef VA_OPT_SUPPORTED_IMPL
+#undef PP_THIRD_ARG
+
+#include <Corrade/configure.h>
+#include <Magnum/configure.h>
+
+#define IMGUI_INCLUDE_IMCONFIG_H
+#define IMGUI_DISABLE_OBSOLETE_FUNCTIONS
+#include <Magnum/ImGuiIntegration/visibility.h>
+
+#endif //LINKATA_CONFIG_HPP_

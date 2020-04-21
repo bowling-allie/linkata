@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>linkata</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='WebApplication.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='linkata.css') }}" />
+  <meta name="viewport" content="width=device-width, height=device-height" />
+</head>
+<body>
+  <div id="container" class="fullsize">
+    <div id="sizer"><div id="expander"><div id="listener">
+        <canvas id="canvas"></canvas>
+        <div id="status">Initialization...</div>
+        <div id="status-description"></div>
+        <script src="{{ url_for('static', filename='EmscriptenApplication.js') }}"></script>
+        <script async="async" src="{{ url_for('static', filename='linkata.js') }}"></script>
+        <div id="linkata-menu-left" class="ui attach-top attach-left attach-bottom">
+          <img src="https://thumbs-prod.si-cdn.com/6sivsj69i3TDC8FXtO-Pw5bUhg0=/420x240/https://public-media.si-cdn.com/filer/7f/94/7f94e88f-6b9e-4c7a-a317-6fc392733f79/chimp_throwing_rock_corbis.jpg" alt="rock">
+        </div>
+        <div id="linkata-menu-right" class="ui attach-top attach-right attach-bottom">
+          <img src="https://cdn.arstechnica.net/wp-content/uploads/2016/03/image-20160229-4076-1t1e2ow-640x359.jpg" alt="fuck"/>
+        </div>
+        <div id="linkata-menu-floating" class="ui floating">
+            <div id="linkata-menu-floating-titlebar" class="titlebar">Click here to move</div>
+            <img src="https://thumbs-prod.si-cdn.com/6sivsj69i3TDC8FXtO-Pw5bUhg0=/420x240/https://public-media.si-cdn.com/filer/7f/94/7f94e88f-6b9e-4c7a-a317-6fc392733f79/chimp_throwing_rock_corbis.jpg" alt="ass">
+        </div>
+    </div></div></div>
+  </div>
+</body>
+</html>

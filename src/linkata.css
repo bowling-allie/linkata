@@ -1,0 +1,34 @@
+#app {
+    position: relative;
+}
+
+.ui {
+    position: absolute;
+    z-index: 20;
+    background-color: #ff3e54;
+    display: none;
+}
+
+.attach-top {
+    top: 0;
+}
+
+.attach-bottom {
+    bottom: 0;
+}
+
+.attach-left {
+    left: 0;
+}
+
+.attach-right {
+    right: 0;
+}
+
+.floating {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+}

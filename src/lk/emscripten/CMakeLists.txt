@@ -1,0 +1,4 @@
+set(LINKATA_UI_SOURCES
+        ${CMAKE_CURRENT_SOURCE_DIR}/ui.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/ui.cpp
+        PARENT_SCOPE)

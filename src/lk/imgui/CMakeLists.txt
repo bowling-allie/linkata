@@ -1,0 +1,14 @@
+set(LINKATA_UI_SOURCES
+        ${CMAKE_CURRENT_SOURCE_DIR}/image_toggle_button.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/image_toggle_button.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/style.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/style.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/text_toggle_button.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/text_toggle_button.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/texture_viewer.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/texture_viewer.tpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/ui.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/ui.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/util.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/util.cpp
+        PARENT_SCOPE)
