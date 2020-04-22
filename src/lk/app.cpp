@@ -70,7 +70,7 @@ lk::app::app(
   }
 */
 
-  {
+  /*{
     //Magnum::Math::BoolVector<83> val{0b10101010, 0b10101010, 0b10101010, 0b10101010, 0b10101010, 0b10101010, 0b10101010, 0b10101010, 0b10101010, 0b10101010, 0b010};
     Magnum::Math::BoolVector<8> val{0b10101010};
     //Magnum::Math::BoolVector<7> val{0b0101010};
@@ -102,8 +102,8 @@ lk::app::app(
       boost::posix_time::ptime end = boost::posix_time::microsec_clock::local_time();
       log::v(TAG, "time2: {}", end - start);
     }
-  }
-
+  }*/
+/*
   Corrade::Containers::Array<int> array1{Corrade::Containers::InPlaceInit, {1, 2, 3}};
   Corrade::Containers::Array<Corrade::Containers::ArrayView<int>> array2{Corrade::Containers::InPlaceInit, {array1, array1, array1}};
   Corrade::Utility::Debug{} << "array1:" << array1;
@@ -112,7 +112,7 @@ lk::app::app(
   LK_LOG_V(TAG, "array2: {}", array2);
 
   LK_LOG_D(TAG, "wow");
-
+*/
   LK_LOG_D(TAG, "windowSize(): {}", windowSize());
   LK_LOG_D(TAG, "framebufferSize(): {}", framebufferSize());
   LK_LOG_D(TAG, "dpiScaling(): {}", dpiScaling());
