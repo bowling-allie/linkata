@@ -2023,7 +2023,7 @@ struct fmt::formatter<Magnum::Shaders::Implementation::FlatFlag> {
 #endif
 
 /// Magnum::Shaders::MeshVisualizer::Flag
-#if 1
+#if 0
 #include <Magnum/Shaders/MeshVisualizer.h>
 #include <Corrade/Utility/Debug.h>
 #include <sstream>
@@ -2073,7 +2073,7 @@ struct fmt::formatter<Magnum::Shaders::Phong::Flag> {
 #endif
 
 /// Magnum::Text::AbstractFont::Feature
-#if 1
+#if 0
 #include <Magnum/Text/AbstractFont.h>
 #include <Corrade/Utility/Debug.h>
 #include <sstream>
@@ -2098,7 +2098,7 @@ struct fmt::formatter<Magnum::Text::AbstractFont::Feature> {
 #endif
 
 /// Magnum::Text::AbstractFontConverter::Feature
-#if 1
+#if 0
 #include <Magnum/Text/AbstractFontConverter.h>
 #include <Corrade/Utility/Debug.h>
 #include <sstream>
@@ -2123,7 +2123,7 @@ struct fmt::formatter<Magnum::Text::AbstractFontConverter::Feature> {
 #endif
 
 /// Magnum::Trade::AbstractImageConverter::Feature
-#if 1
+#if 0
 #include <Magnum/Trade/AbstractImageConverter.h>
 #include <Corrade/Utility/Debug.h>
 #include <sstream>
@@ -2148,7 +2148,7 @@ struct fmt::formatter<Magnum::Trade::AbstractImageConverter::Feature> {
 #endif
 
 /// Magnum::Trade::AbstractImporter::Feature
-#if 1
+#if 0
 #include <Magnum/Trade/AbstractImporter.h>
 #include <Corrade/Utility/Debug.h>
 #include <sstream>
