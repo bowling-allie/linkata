@@ -2022,35 +2022,16 @@ struct fmt::formatter<Magnum::Shaders::Implementation::FlatFlag> {
 };
 #endif
 
-/// Magnum::Shaders::MeshVisualizer2D::Flag
-/// Magnum::Shaders::MeshVisualizer3D::Flag
+/// Magnum::Shaders::MeshVisualizer::Flag
 #if 1
 #include <Magnum/Shaders/MeshVisualizer.h>
 #include <Corrade/Utility/Debug.h>
 #include <sstream>
 
 template<>
-struct fmt::formatter<Magnum::Shaders::MeshVisualizer2D::Flag> {
+struct fmt::formatter<Magnum::Shaders::MeshVisualizer::Flag> {
  private:
-  using type = Magnum::Shaders::MeshVisualizer2D::Flag;
-
- public:
-  template<typename ParseContext>
-  auto parse(ParseContext &ctx) { return ctx.begin(); }
-
-  template<typename FormatContext>
-  auto format(const type &value, FormatContext &ctx) {
-    std::ostringstream out;
-    Corrade::Utility::Debug d{&out, Corrade::Utility::Debug::Flag::NoNewlineAtTheEnd};
-    d << value;
-    return fmt::format_to(ctx.out(), "{}", out.str());
-  }
-};
-
-template<>
-struct fmt::formatter<Magnum::Shaders::MeshVisualizer3D::Flag> {
- private:
-  using type = Magnum::Shaders::MeshVisualizer3D::Flag;
+  using type = Magnum::Shaders::MeshVisualizer::Flag;
 
  public:
   template<typename ParseContext>
@@ -2091,16 +2072,16 @@ struct fmt::formatter<Magnum::Shaders::Phong::Flag> {
 };
 #endif
 
-/// Magnum::Text::FontFeature
+/// Magnum::Text::AbstractFont::Feature
 #if 1
 #include <Magnum/Text/AbstractFont.h>
 #include <Corrade/Utility/Debug.h>
 #include <sstream>
 
 template<>
-struct fmt::formatter<Magnum::Text::FontFeature> {
+struct fmt::formatter<Magnum::Text::AbstractFont::Feature> {
  private:
-  using type = Magnum::Text::FontFeature;
+  using type = Magnum::Text::AbstractFont::Feature;
 
  public:
   template<typename ParseContext>
@@ -2116,16 +2097,16 @@ struct fmt::formatter<Magnum::Text::FontFeature> {
 };
 #endif
 
-/// Magnum::Text::FontConverterFeature
+/// Magnum::Text::AbstractFontConverter::Feature
 #if 1
 #include <Magnum/Text/AbstractFontConverter.h>
 #include <Corrade/Utility/Debug.h>
 #include <sstream>
 
 template<>
-struct fmt::formatter<Magnum::Text::FontConverterFeature> {
+struct fmt::formatter<Magnum::Text::AbstractFontConverter::Feature> {
  private:
-  using type = Magnum::Text::FontConverterFeature;
+  using type = Magnum::Text::AbstractFontConverter::Feature;
 
  public:
   template<typename ParseContext>
@@ -2141,16 +2122,16 @@ struct fmt::formatter<Magnum::Text::FontConverterFeature> {
 };
 #endif
 
-/// Magnum::Trade::ImageConverterFeature
+/// Magnum::Trade::AbstractImageConverter::Feature
 #if 1
 #include <Magnum/Trade/AbstractImageConverter.h>
 #include <Corrade/Utility/Debug.h>
 #include <sstream>
 
 template<>
-struct fmt::formatter<Magnum::Trade::ImageConverterFeature> {
+struct fmt::formatter<Magnum::Trade::AbstractImageConverter::Feature> {
  private:
-  using type = Magnum::Trade::ImageConverterFeature;
+  using type = Magnum::Trade::AbstractImageConverter::Feature;
 
  public:
   template<typename ParseContext>
@@ -2166,16 +2147,16 @@ struct fmt::formatter<Magnum::Trade::ImageConverterFeature> {
 };
 #endif
 
-/// Magnum::Trade::ImporterFeature
+/// Magnum::Trade::AbstractImporter::Feature
 #if 1
 #include <Magnum/Trade/AbstractImporter.h>
 #include <Corrade/Utility/Debug.h>
 #include <sstream>
 
 template<>
-struct fmt::formatter<Magnum::Trade::ImporterFeature> {
+struct fmt::formatter<Magnum::Trade::AbstractImporter::Feature> {
  private:
-  using type = Magnum::Trade::ImporterFeature;
+  using type = Magnum::Trade::AbstractImporter::Feature;
 
  public:
   template<typename ParseContext>
