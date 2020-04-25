@@ -6,6 +6,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 list(PREPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/modules/")
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/magnum_modules")
 
 set(LINKATA_RES_DIR "${CMAKE_SOURCE_DIR}/res" CACHE PATH "Resource dir")
 
@@ -201,8 +202,6 @@ if (LINKATA_FETCH_nanovg)
         add_library(nanovg::nanovg ALIAS nanovg)
     endif ()
 endif ()
-
-list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/magnum_modules")
 
 option(LINKATA_EMBED_RESOURCES "Embed files in res/ into executable" ON)
 if (LINKATA_EMBED_RESOURCES)
