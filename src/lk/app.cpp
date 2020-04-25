@@ -15,10 +15,6 @@
 #include <Magnum/GL/DefaultFramebuffer.h>
 #include <Magnum/GL/Renderer.h>
 
-#include <boost/date_time/posix_time/posix_time.hpp>
-
-#include <iostream>
-
 namespace {
   lk::svg::handle hello_kitty_svg{nullptr};
 }
