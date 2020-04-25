@@ -10,7 +10,7 @@
 
 #include <lk/ready_task_queue.hpp>
 
-namespace lk::ui {
+namespace lk {
   namespace ultralight {
     class ui {
      public:

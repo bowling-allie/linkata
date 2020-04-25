@@ -7,7 +7,7 @@
 
 #include <lk/ready_task_queue.hpp>
 
-namespace lk::ui {
+namespace lk {
   namespace emscripten {
     class ui {
      public:
