@@ -11,19 +11,6 @@ set(LINKATA_RES_DIR "${CMAKE_SOURCE_DIR}/res" CACHE PATH "Resource dir")
 
 include(LinkataFetchDependencies)
 
-#{
-FetchContent_Declare(toolchains
-        GIT_REPOSITORY https://github.com/mosra/toolchains.git
-        #GIT_SHALLOW ON-
-        GIT_PROGRESS ON)
-
-FetchContent_GetProperties(toolchains)
-if (NOT toolchains_POPULATED)
-    FetchContent_Populate(toolchains)
-    list(APPEND CMAKE_MODULE_PATH "${toolchains_SOURCE_DIR}/modules")
-endif ()
-#}
-
 linkata_fetch_option(corrade OFF)
 if (LINKATA_FETCH_corrade)
     FetchContent_Declare(corrade
