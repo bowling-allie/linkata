@@ -242,7 +242,7 @@ set(LINKATA_UI ${LINKATA_UI_DEFAULT} CACHE STRING "UI backend")
 set_property(CACHE LINKATA_UI PROPERTY STRINGS ${LINKATA_UI_STRINGS})
 set(LINKATA_UI_${LINKATA_UI} ON)
 
-option(LINKATA_MAGNUM_2019_10_COMPATIBILITY "" OFF)
+#option(LINKATA_MAGNUM_2019_10_COMPATIBILITY "" OFF)
 
 option(LINKATA_HAX "Workarounds for if you have no control over lib versions or whatever (you probably shouldn't rely on these)" OFF)
 mark_as_advanced(LINKATA_HAX)
