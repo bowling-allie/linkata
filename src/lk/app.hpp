@@ -44,9 +44,9 @@ namespace lk {
     void textInputEvent(TextInputEvent &event) override;
 
    private:
+    bool m_isDrawing{false};
     //std::mutex m_mutex{};
     //std::condition_variable m_condition{};
-    //std::atomic_bool m_startRender{false};
     std::thread::id m_threadId{std::this_thread::get_id()};
     ready_task_queue m_taskQueue{};
     std::unique_ptr<state> m_state{nullptr};

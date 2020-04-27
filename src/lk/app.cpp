@@ -265,8 +265,11 @@ void lk::app::relayout(
 }
 
 void lk::app::drawEvent() {
+  if (m_isDrawing) return;
+  m_isDrawing = true;
   draw();
   redraw();
+  m_isDrawing = false;
 }
 
 void lk::app::viewportEvent(ViewportEvent &event) {

@@ -267,6 +267,19 @@ if (CORRADE_TARGET_WINDOWS)
 
     install(TARGETS linkata
             DESTINATION ${MAGNUM_DEPLOY_PREFIX})
+
+    if (MINGW)
+        include(UseMingw)
+
+        get_filename_component(_LINKATA_MINGW_BIN_DIR ${CMAKE_CXX_COMPILER} PATH)
+        set(DLL_SEARCH_PATH ${_LINKATA_MINGW_BIN_DIR})
+
+        mingw_bundle_dlls(${MAGNUM_DEPLOY_PREFIX}
+                "libwinpthread-1.dll"
+                "libgcc_s_seh-1.dll"
+                "libstdc++-6.dll"
+                "glfw3.dll")
+    endif ()
 elseif (CORRADE_TARGET_EMSCRIPTEN)
     target_link_options(linkata PRIVATE "SHELL:--pre-js ${CMAKE_CURRENT_SOURCE_DIR}/linkata_pre.js")
     target_link_options(linkata PRIVATE "SHELL:--post-js ${CMAKE_CURRENT_SOURCE_DIR}/linkata_post.js")
