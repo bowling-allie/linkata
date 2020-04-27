@@ -16,7 +16,8 @@ linkata_fetch_option(corrade OFF)
 if (LINKATA_FETCH_corrade)
     FetchContent_Declare(corrade
             GIT_REPOSITORY https://github.com/mosra/corrade.git
-            #GIT_SHALLOW ON
+            GIT_TAG ${LINKATA_FETCH_corrade_GIT_TAG}
+            GIT_SHALLOW ON
             GIT_PROGRESS ON)
 
     set(BUILD_DEPRECATED OFF CACHE BOOL "")
@@ -45,7 +46,8 @@ linkata_fetch_option(magnum OFF)
 if (LINKATA_FETCH_magnum)
     FetchContent_Declare(magnum
             GIT_REPOSITORY https://github.com/mosra/magnum.git
-            #GIT_SHALLOW ON
+            GIT_TAG ${LINKATA_FETCH_magnum_GIT_TAG}
+            GIT_SHALLOW ON
             GIT_PROGRESS ON)
 
     set(BUILD_DEPRECATED OFF CACHE BOOL "")
@@ -75,7 +77,8 @@ linkata_fetch_option(magnum-plugins OFF)
 if (LINKATA_FETCH_magnum-plugins)
     FetchContent_Declare(magnum-plugins
             GIT_REPOSITORY https://github.com/mosra/magnum-plugins.git
-            #GIT_SHALLOW ON
+            GIT_TAG ${LINKATA_FETCH_magnum_plugins_GIT_TAG}
+            GIT_SHALLOW ON
             GIT_PROGRESS ON)
 
     set(BUILD_DEPRECATED OFF CACHE BOOL "")
@@ -96,12 +99,13 @@ if (VCPKG_TOOLCHAIN)
 else ()
     set(_LINKATA_FETCH_IMGUI_DEFAULT ON)
 endif ()
-linkata_fetch_option(imgui "${_LINKATA_FETCH_IMGUI_DEFAULT}")
+linkata_fetch_option(imgui "${_LINKATA_FETCH_IMGUI_DEFAULT}"
+        GIT_TAG_DEFAULT v1.75)
 if (LINKATA_FETCH_imgui)
     FetchContent_Declare(imgui
             GIT_REPOSITORY https://github.com/ocornut/imgui.git
-            GIT_TAG v1.75
-            #GIT_SHALLOW ON
+            GIT_TAG ${LINKATA_FETCH_imgui_GIT_TAG}
+            GIT_SHALLOW ON
             GIT_PROGRESS ON)
     FetchContent_GetProperties(imgui)
     if (NOT imgui_POPULATED)
@@ -114,7 +118,8 @@ linkata_fetch_option(magnum-integration OFF)
 if (LINKATA_FETCH_magnum-integration)
     FetchContent_Declare(magnum-integration
             GIT_REPOSITORY https://github.com/mosra/magnum-integration.git
-            #GIT_SHALLOW ON
+            GIT_TAG ${LINKATA_FETCH_magnum_integration_GIT_TAG}
+            GIT_SHALLOW ON
             GIT_PROGRESS ON)
 
     set(BUILD_DEPRECATED OFF CACHE BOOL "")
@@ -133,12 +138,13 @@ if (LINKATA_FETCH_magnum-integration)
     #set(MagnumIntegration_ROOT "${magnum-integration_SOURCE_DIR}/src" CACHE PATH "")
 endif ()
 
-linkata_fetch_option(fmt OFF)
+linkata_fetch_option(fmt OFF
+        GIT_TAG_DEFAULT 6.1.2)
 if (LINKATA_FETCH_fmt)
     FetchContent_Declare(fmt
             GIT_REPOSITORY https://github.com/fmtlib/fmt.git
-            GIT_TAG 6.1.2
-            #GIT_SHALLOW ON
+            GIT_TAG ${LINKATA_FETCH_fmt_GIT_TAG}
+            GIT_SHALLOW ON
             GIT_PROGRESS ON)
 
     set(MASTER_PROJECT OFF CACHE BOOL "")
@@ -151,7 +157,8 @@ linkata_fetch_option(nanosvg ON)
 if (LINKATA_FETCH_nanosvg)
     FetchContent_Declare(nanosvg
             GIT_REPOSITORY https://github.com/memononen/nanosvg.git
-            #GIT_SHALLOW ON
+            GIT_TAG ${LINKATA_FETCH_nanosvg_GIT_TAG}
+            GIT_SHALLOW ON
             GIT_PROGRESS ON)
     FetchContent_GetProperties(nanosvg)
     if (NOT nanosvg_POPULATED)
@@ -173,7 +180,8 @@ linkata_fetch_option(nanovg ON)
 if (LINKATA_FETCH_nanovg)
     FetchContent_Declare(nanovg
             GIT_REPOSITORY https://github.com/memononen/nanovg.git
-            #GIT_SHALLOW ON
+            GIT_TAG ${LINKATA_FETCH_nanovg_GIT_TAG}
+            GIT_SHALLOW ON
             GIT_PROGRESS ON)
 
     FetchContent_GetProperties(nanovg)
