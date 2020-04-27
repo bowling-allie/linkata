@@ -77,7 +77,7 @@ linkata_fetch_option(magnum-plugins OFF)
 if (LINKATA_FETCH_magnum-plugins)
     FetchContent_Declare(magnum-plugins
             GIT_REPOSITORY https://github.com/mosra/magnum-plugins.git
-            GIT_TAG ${LINKATA_FETCH_magnum_plugins_GIT_TAG}
+            GIT_TAG ${LINKATA_FETCH_magnum-plugins_GIT_TAG}
             GIT_SHALLOW ON
             GIT_PROGRESS ON)
 
@@ -118,7 +118,7 @@ linkata_fetch_option(magnum-integration OFF)
 if (LINKATA_FETCH_magnum-integration)
     FetchContent_Declare(magnum-integration
             GIT_REPOSITORY https://github.com/mosra/magnum-integration.git
-            GIT_TAG ${LINKATA_FETCH_magnum_integration_GIT_TAG}
+            GIT_TAG ${LINKATA_FETCH_magnum-integration_GIT_TAG}
             GIT_SHALLOW ON
             GIT_PROGRESS ON)
 
