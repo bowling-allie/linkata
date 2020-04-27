@@ -14,11 +14,11 @@
 #include "lk/emoji_svg_cache.hpp"
 
 #include <imgui.h>
-
+/*
 #if IMGUI_VERSION_NUM < 17500
 #error "imgui version >= 1.75 required (unicode support)"
 #endif
-
+*/
 #include <Magnum/ImGuiIntegration/Context.hpp>
 
 namespace lk {
